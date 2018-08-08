@@ -16,6 +16,7 @@
         <el-menu-item index="/list/table">简单table列表</el-menu-item>
         <el-menu-item index="/list/table2">自定义table列表</el-menu-item>
         <el-menu-item index="/list/card">卡片列表</el-menu-item>
+        <el-menu-item index="/list/article">文章列表</el-menu-item>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">

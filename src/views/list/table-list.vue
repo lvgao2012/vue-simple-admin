@@ -21,7 +21,7 @@
     <div>
       <el-table :data="query.list" :border="true" style="width: 100%">
         <el-table-column align="center" label="头像" width="80">
-          <template scope="scope">
+          <template slot-scope="scope">
             <div style="line-height:1px">
               <img style="width:35px;border-radius:100px;display:inline-block" :src="scope.row.headurl">
             </div>
@@ -30,18 +30,18 @@
         <el-table-column align="center" label="姓名" prop="name" width="120">
         </el-table-column>
         <el-table-column align="center" label="生日" width="250">
-          <template scope="scope">
+          <template slot-scope="scope">
             <el-date-picker v-model="scope.row.birthday" size="mini"></el-date-picker>
             <!-- {{scope.row.date}} -->
           </template>
         </el-table-column>
         <el-table-column label="个人标签" width="180">
-          <template scope="scope">
-            <el-tag size="small" v-for="i in scope.row.name" :key="i">{{i}}</el-tag>
+          <template slot-scope="scope">
+            <el-tag size="small" v-for="i in slot-scope.row.name" :key="i">{{i}}</el-tag>
           </template>
         </el-table-column>
         <el-table-column label="家庭住址">
-          <template scope="scope">
+          <template slot-scope="scope">
             {{scope.row.address}}
           </template>
         </el-table-column>

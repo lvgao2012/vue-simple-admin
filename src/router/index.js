@@ -7,35 +7,40 @@ import index from '@/views/index/index'
 import tableList from '@/views/list/table-list'
 import tableList2 from '@/views/list/table-list2'
 import cardList from '@/views/list/card-list'
+import articleList from '@/views/list/article-list'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  routes: [{
-      path: '/',
-      base: __dirname,
-      component: index
-    },
-    {
-      path: '/index',
-      component: index
-    },
-    {
-      path: '/list/table',
-      component: tableList
-    },
-    {
-      path: '/list/table2',
-      component: tableList2
-    },
-    {
-      path: '/list/card',
-      component: cardList
-    },
-    {
-      path: '*',
-      component: emptyPage
-    }
-  ]
+    mode: 'history',
+    routes: [{
+            path: '/',
+            base: __dirname,
+            component: index
+        },
+        {
+            path: '/index',
+            component: index
+        },
+        {
+            path: '/list/table',
+            component: tableList
+        },
+        {
+            path: '/list/table2',
+            component: tableList2
+        },
+        {
+            path: '/list/card',
+            component: cardList
+        },
+        {
+            path: '/list/article',
+            component: articleList
+        },
+        {
+            path: '*',
+            component: emptyPage
+        }
+    ]
 })
