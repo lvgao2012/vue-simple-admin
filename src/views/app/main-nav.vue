@@ -1,0 +1,74 @@
+<template>
+  <el-aside id="mian-nav" width="auto">
+    <div style="height:60px;line-height:60px;text-align:center;color:white;" @click="$emit('update:collapse',!collapse)">
+      {{collapse?'点我':'占个坑LOGO点我'}}
+    </div>
+    <el-menu class="el-menu-vertical-demo" :router="true" @open="handleOpen" @close="handleClose" background-color="#2e3f4f" text-color="#fff" :collapse="collapse">
+      <el-menu-item index="/index">
+        <i class="el-icon-menu"></i>
+        <span slot="title">工作台</span>
+      </el-menu-item>
+      <el-submenu index="1">
+        <template slot="title">
+          <i class="el-icon-tickets"></i>
+          <span>列表展示</span>
+        </template>
+        <el-menu-item index="/list/table">简单table列表</el-menu-item>
+        <el-menu-item index="/list/table2">自定义table列表</el-menu-item>
+        <el-menu-item index="/list/card">卡片列表</el-menu-item>
+      </el-submenu>
+      <el-submenu index="1">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>详情展示</span>
+        </template>
+        <el-menu-item-group title="tab页">
+          <el-menu-item index="1-3">tab页</el-menu-item>
+        </el-menu-item-group>
+        <el-submenu index="1-4">
+          <template slot="title">图表</template>
+          <el-menu-item index="1-4-1">选项1</el-menu-item>
+        </el-submenu>
+      </el-submenu>
+      <el-menu-item index="2">
+        <i class="el-icon-menu"></i>
+        <span slot="title">文章编辑</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <i class="el-icon-document"></i>
+        <span slot="title">未知</span>
+      </el-menu-item>
+      <el-menu-item index="4">
+        <i class="el-icon-setting"></i>
+        <span slot="title">地图</span>
+      </el-menu-item>
+    </el-menu>
+  </el-aside>
+</template>
+<script>
+export default {
+  props: {
+    collapse: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      navs: [{ path: 'index', name: '工作台', icon: 'el-icon-menu', sort: 0, children: [] }]
+    }
+  },
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath)
+    }
+  },
+  computed: {},
+  mounted() {}
+}
+</script>
+<style lang="stylus">
+</style>
