@@ -17,7 +17,7 @@
         <el-menu-item index="/list/table2">自定义table列表</el-menu-item>
         <el-menu-item index="/list/card">卡片列表</el-menu-item>
       </el-submenu>
-      <el-submenu index="1">
+      <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span>详情展示</span>
@@ -30,17 +30,22 @@
           <el-menu-item index="1-4-1">选项1</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">文章编辑</span>
-      </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
-        <span slot="title">未知</span>
-      </el-menu-item>
+      <el-submenu index="3">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>其他常用组件</span>
+        </template>
+        <el-menu-item index="1-3">文章编辑</el-menu-item>
+        <el-menu-item index="1-4-1">高德地图</el-menu-item>
+        <el-menu-item index="1-4-1">轮播</el-menu-item>
+        <el-menu-item index="1-4-1">图标iconfont</el-menu-item>
+        <el-menu-item index="1-4-1">自定义上传</el-menu-item>
+        <el-menu-item index="1-4-1">拖拽排序</el-menu-item>
+        <el-menu-item index="1-4-1">滚动条</el-menu-item>
+      </el-submenu>
       <el-menu-item index="4">
         <i class="el-icon-setting"></i>
-        <span slot="title">地图</span>
+        <span slot="title">部门树</span>
       </el-menu-item>
     </el-menu>
   </el-aside>

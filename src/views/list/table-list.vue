@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <el-form size="mini" inline>
+    <el-form size="small" inline>
       <el-form-item label="请选择">
-        <el-select></el-select>
+        <el-select v-model="query.type"></el-select>
       </el-form-item>
       <el-form-item label="请选择">
         <el-input></el-input>
@@ -15,42 +15,23 @@
         <el-date-picker></el-date-picker>
       </el-form-item>
       <el-form-item>
-        <el-button>确认</el-button>
+        <el-button>筛选</el-button>
       </el-form-item>
     </el-form>
-    <el-card shadow="never">
-      <el-table :data="query.list" style="width: 100%">
-        <el-table-column prop="date" label="日期" width="180">
-        </el-table-column>
-        <el-table-column prop="name" label="姓名" width="180">
-        </el-table-column>
-        <el-table-column prop="address" label="地址">
-        </el-table-column>
-        <el-table-column prop="address" label="地址">
-        </el-table-column>
-        <el-table-column prop="address" label="地址">
-        </el-table-column>
-        <el-table-column prop="address" label="地址">
-        </el-table-column>
-      </el-table>
-    </el-card>
-    <div style="text-align:right;padding-top:20px">
-      <el-pagination background layout="prev, pager, next" :total="query.total">
-      </el-pagination>
-    </div>
-
-    <el-card shadow="never" header="自定义组件">
-      <el-table :data="query.list" style="width: 100%">
-        <el-table-column label="头像" width="180">
+    <div>
+      <el-table :data="query.list" :border="true" style="width: 100%">
+        <el-table-column align="center" label="头像" width="80">
           <template scope="scope">
-            <img style="width:35px;border-radius:100px;display:inline-block" src="http://image.laodao.so/image/user/head/1532047099007590.png?x-oss-process=image/resize,m_fill,h_100,w_100,limit_0" :alt="scope.row.name">
+            <div style="line-height:1px">
+              <img style="width:35px;border-radius:100px;display:inline-block" :src="scope.row.headurl">
+            </div>
           </template>
         </el-table-column>
-        <el-table-column label="姓名" prop="name" width="180">
+        <el-table-column align="center" label="姓名" prop="name" width="120">
         </el-table-column>
-        <el-table-column label="生日" width="250">
+        <el-table-column align="center" label="生日" width="250">
           <template scope="scope">
-            <el-date-picker v-model="scope.row.date" size="mini"></el-date-picker>
+            <el-date-picker v-model="scope.row.birthday" size="mini"></el-date-picker>
             <!-- {{scope.row.date}} -->
           </template>
         </el-table-column>
@@ -64,14 +45,14 @@
             {{scope.row.address}}
           </template>
         </el-table-column>
-        <el-table-column label="操作">
-          <template scope="scope">
+        <el-table-column align="center" label="操作" width="150">
+          <template slot-scope="scope">
             <el-button type="danger" size="mini">编辑</el-button>
             <el-button type="primary" size="mini">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
-    </el-card>
+    </div>
     <div style="text-align:right;padding-top:20px">
       <el-pagination background layout="prev, pager, next" :total="query.total">
       </el-pagination>
@@ -83,6 +64,7 @@ export default {
   data() {
     return {
       query: {
+        type: 0,
         psize: 10,
         pdix: 1,
         list: [],
@@ -92,28 +74,11 @@ export default {
   },
   methods: {
     getList() {
-      this.query.list = [
-        {
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        },
-        {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
-        },
-        {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
-        },
-        {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
-        }
-      ]
+      this.$api.list.getList().then((res) => {
+        this.query.list = res.data.list
+        this.query.total = res.data.total
+      })
+
       this.query.total = 100
     }
   },

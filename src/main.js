@@ -5,6 +5,13 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'reset-css'
 
+
+import '@/libs/mockdata.js'
+import utils from '@/libs/utils.js'
+import api from '@/libs/api/index.js'
+Vue.prototype.$utils = utils
+Vue.prototype.$api = api
+
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false

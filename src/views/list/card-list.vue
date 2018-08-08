@@ -1,13 +1,13 @@
 <template>
   <div>
     <el-row :gutter="10">
-      <el-col :lg="4" :md="6" sm="8" v-for="i in 20" :key="i">
+      <el-col :lg="4" :md="6" :sm="8" v-for="i in query.list" :key="i.id">
         <el-card :body-style="{ padding: '0px' }" style="margin-bottom:10px">
-          <img src="http://lorempixel.com/300/400/" style="width:100%" class="image">
+          <img :src="i.headurl" style="width:100%" class="image">
           <div style="padding: 14px;">
-            <span>华丽华丽华丽华丽</span>
+            <span>{{i.name}}</span>
             <div>
-              <time class="time"> 2018-08-08</time>
+              <time class="time">{{i.birthday}}</time>
               <el-button type="text" class="button">详情</el-button>
             </div>
           </div>
@@ -19,11 +19,29 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      query: {
+        psize: 10,
+        pdix: 1,
+        list: [],
+        total: 0
+      }
+    }
   },
-  methods: {},
+  methods: {
+    getList() {
+      this.$api.list.getListCard().then((res) => {
+        this.query.list = res.data.list
+        this.query.total = res.data.total
+      })
+
+      this.query.total = 100
+    }
+  },
   computed: {},
-  mounted() {}
+  mounted() {
+    this.getList()
+  }
 }
 </script>
 <style lang="stylus">
