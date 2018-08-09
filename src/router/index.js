@@ -7,7 +7,10 @@ import index from '@/views/index/index'
 import tableList from '@/views/list/table-list'
 import tableList2 from '@/views/list/table-list2'
 import cardList from '@/views/list/card-list'
-import articleList from '@/views/list/article-list'
+//文章
+import articleList from '@/views/article/article-list'
+import articleInfo from '@/views/article/article-info'
+import articleEdit from '@/views/article/article-edit'
 
 Vue.use(Router)
 
@@ -35,8 +38,16 @@ export default new Router({
             component: cardList
         },
         {
-            path: '/list/article',
+            path: '/article/list',
             component: articleList
+        },
+        {
+            path: '/article/edit/:id',
+            component: articleEdit
+        },
+        {
+            path: '/article/info/:id',
+            component: articleInfo
         },
         {
             path: '*',

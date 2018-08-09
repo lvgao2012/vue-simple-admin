@@ -26,6 +26,7 @@ export default {
 }
 </script>
 <style lang="stylus">
+@import "../../assets/css/func.styl"
 .page-main
   .app-breadcrumb
     padding 20px

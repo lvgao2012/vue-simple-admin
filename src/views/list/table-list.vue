@@ -37,7 +37,7 @@
         </el-table-column>
         <el-table-column label="个人标签" width="180">
           <template slot-scope="scope">
-            <el-tag size="small" v-for="i in slot-scope.row.name" :key="i">{{i}}</el-tag>
+            <el-tag size="small" v-for="i in scope.row.name" :key="i">{{i}}</el-tag>
           </template>
         </el-table-column>
         <el-table-column label="家庭住址">
@@ -53,7 +53,7 @@
         </el-table-column>
       </el-table>
     </div>
-    <div style="text-align:right;padding-top:20px">
+    <div class="page-bar">
       <el-pagination background layout="prev, pager, next" :total="query.total">
       </el-pagination>
     </div>
@@ -89,4 +89,5 @@ export default {
 }
 </script>
 <style lang="stylus">
+@import "../../assets/css/func.styl"
 </style>

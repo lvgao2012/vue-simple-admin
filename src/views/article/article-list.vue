@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div>
+  <div class="page-content">
+    <div class="article-search">
       <el-form size="small">
         <el-form-item label="类别：">
           <el-checkbox-group>
@@ -28,17 +28,17 @@
         </el-form-item>
       </el-form>
     </div>
-    <el-row :gutter="15">
+    <el-row class="article-list" :gutter="15">
       <el-col :lg="12" :md="24" :sm="24" v-for="i in query.list" :key="i.id">
-        <div :body-style="{ padding: '0px' }" style="margin-bottom:20px;overflow:hidden;clear:both;background:rgba(0,0,0,1)">
-          <div class="article-img" style="width:150px;float:left;padding:20px 0px;">
+        <div class="article-list-info" :body-style="{ padding: '0px' }">
+          <div class="article-img">
             <img :src="i.cover" style="width:100%" class="image">
           </div>
-          <div style="padding: 10px 20px;;height:135px;margin-left:150px;background:white;border:1px solid #ccc">
-            <p style="font-size:16px;font-weight:bold;line-height:28px">{{i.title}}
-              <el-dropdown style="float:right">
+          <div class="article-info">
+            <p class="article-title">{{i.title}}
+              <el-dropdown class="more">
                 <a style="padding:5px 10px;" class="el-dropdown-link">
-                  ...
+                  <i class="el-icon-more"></i>
                 </a>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item>详情</el-dropdown-item>
@@ -47,10 +47,10 @@
                 </el-dropdown-menu>
               </el-dropdown>
             </p>
-            <div style="padding:5px 0px;color:#333;font-size:14px;line-height:18px;height:70px;overflow:hidden">
+            <div class="article-content">
               <p>{{i.context}}</p>
             </div>
-            <div style="font-size:14px;line-height:18px;padding:10px 0px">
+            <div class="article-footer">
               <p>发表于{{i.createTime}}
                 <span style="float:right">阅:100 评:5</span>
               </p>
@@ -59,7 +59,7 @@
         </div>
       </el-col>
     </el-row>
-    <div style="text-align:right;padding-top:20px">
+    <div class="page-bar">
       <el-pagination background layout="prev, pager, next" :total="query.total">
       </el-pagination>
     </div>
@@ -92,4 +92,42 @@ export default {
 }
 </script>
 <style lang="stylus">
+@import "../../assets/css/func.styl"
+.page-content
+  .article-search
+    margin-bottom len-mg
+  .article-list
+    .article-list-info
+      margin-bottom len-mg
+      overflow hidden
+      clear both
+      background black
+      .article-img
+        width 150px
+        float left
+        padding 20px 0px
+        img
+          width 100%
+      .article-info
+        padding 10px 20px
+        height 135px
+        margin-left 150px
+        background white
+        border 1px solid t-border
+        .article-title
+          font-size f-md + 2
+          font-weight bold
+          line-height 28px
+          .more
+            float right
+            cursor pointer
+        .article-content
+          padding 5px 0px
+          color t-black
+          line-height 18px
+          height 70px
+          overflow hidden
+        .article-footer
+          line-height 18px
+          padding 10px 0px
 </style>

@@ -16,20 +16,15 @@
         <el-menu-item index="/list/table">简单table列表</el-menu-item>
         <el-menu-item index="/list/table2">自定义table列表</el-menu-item>
         <el-menu-item index="/list/card">卡片列表</el-menu-item>
-        <el-menu-item index="/list/article">文章列表</el-menu-item>
+        <el-menu-item index="/article/list">文章列表</el-menu-item>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span>详情展示</span>
         </template>
-        <el-menu-item-group title="tab页">
-          <el-menu-item index="1-3">tab页</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">图表</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
+          <el-menu-item index="/article/info/1">文章详情</el-menu-item>
+          <el-menu-item index="/article/edit/0">文章添加</el-menu-item>
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">
@@ -77,4 +72,5 @@ export default {
 }
 </script>
 <style lang="stylus">
+@import "../../assets/css/func.styl"
 </style>

@@ -5,7 +5,14 @@ const apis = {
   },
   getInfoB() {
 
+  },
+  getArticleInfo() {
+    return http.get({
+      url: 'article/info',
+      data: {
+        id: 1
+      }
+    })
   }
 }
 export default apis
-
