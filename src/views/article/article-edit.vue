@@ -36,19 +36,25 @@
         </el-col>
         <el-col :lg="8" :md="12" :sm="24" style="text-align:center">
           <div class="iphone-x">
+
             <div class="article-phone-info">
-              <div class="cover" :style="{background:`url('${info.cover}')`}">
-              </div>
-              <div class="title">{{info.title}}</div>
-              <div class="author">
-                类别：{{inf.type}} 发布时间：{{info.date}} 作者：{{info.author}}
-              </div>
-              <div class="sub-title">
-                {{info.subtitle}}
-              </div>
-              <div class="content" v-html="info.content">
-              </div>
+              <vue2-scrollbar style="height:100%">
+                <div>
+                  <div class="cover" :style="{background:`url('${info.cover}')`}">
+                  </div>
+                  <div class="title">{{info.title}}</div>
+                  <div class="author">
+                    作者：{{info.author}}
+                  </div>
+                  <div class="sub-title">
+                    {{info.subtitle}}
+                  </div>
+                  <div class="content" v-html="info.content">
+                  </div>
+                </div>
+              </vue2-scrollbar>
             </div>
+
           </div>
         </el-col>
       </el-row>
@@ -57,6 +63,7 @@
 </template>
 <script>
 import { quillEditor } from 'vue-quill-editor'
+import vue2Scrollbar from 'vue2-scrollbar'
 export default {
   data() {
     return {
@@ -71,7 +78,8 @@ export default {
     }
   },
   components: {
-    quillEditor
+    quillEditor,
+    vue2Scrollbar
   },
   methods: {
     getInfo() {
@@ -132,7 +140,7 @@ export default {
       height 600px
       text-align left
       margin 20px auto
-      overflow-y scroll
+      overflow-y hidden
       font-size f-md
       .cover
         height 200px
@@ -140,16 +148,17 @@ export default {
         background-position center
       .title
         text-align center
-        font-size 24px
-        padding 20px
-      .author
+        font-size 18px
         padding 10px
+      .author
+        padding 5px
         text-align center
       .sub-title
-        padding 10px
+        padding 5px
+        line-height 20px
         color #aaa
       .content
-        padding 10px
+        padding 5px
         line-height 20px
         strong
           font-weight bold

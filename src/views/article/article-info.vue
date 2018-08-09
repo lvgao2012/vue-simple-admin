@@ -8,7 +8,7 @@
             </div>
             <div class="title">{{info.title}}</div>
             <div class="author">
-              类别：{{inf.type}} 发布时间：{{info.date}} 作者：{{info.author}}
+              类别：{{info.type}} 发布时间：{{info.date}} 作者：{{info.author}}
             </div>
             <div class="sub-title">
               {{info.subtitle}}
