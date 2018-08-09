@@ -4,7 +4,7 @@
       <el-row :gutter="20">
         <el-col :lg="16" :md="12" :sm="24" style="text-align:center">
           <div class="article-info">
-            <div class="cover" :style="{background:`url('${info.cover}')`}">
+            <div class="cover" :style="{backgroundImage:`url('${info.cover}')`}">
             </div>
             <div class="title">{{info.title}}</div>
             <div class="author">

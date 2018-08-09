@@ -31,10 +31,10 @@
     <el-row class="article-list" :gutter="15">
       <el-col :lg="12" :md="24" :sm="24" v-for="i in query.list" :key="i.id">
         <div class="article-list-info" :body-style="{ padding: '0px' }">
-          <div class="article-img">
+          <div class="article-img" @click="$router.push(`/article/info/${i.id}`)">
             <img :src="i.cover" style="width:100%" class="image">
           </div>
-          <div class="article-info">
+          <div class="article-item-info">
             <p class="article-title">{{i.title}}
               <el-dropdown class="more">
                 <a style="padding:5px 10px;" class="el-dropdown-link">
@@ -106,9 +106,10 @@ export default {
         width 150px
         float left
         padding 20px 0px
+        cursor pointer
         img
           width 100%
-      .article-info
+      .article-item-info
         padding 10px 20px
         height 135px
         margin-left 150px

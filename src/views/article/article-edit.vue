@@ -40,7 +40,7 @@
             <div class="article-phone-info">
               <vue2-scrollbar style="height:100%">
                 <div>
-                  <div class="cover" :style="{background:`url('${info.cover}')`}">
+                  <div class="cover" :style="{backgroundImage:`url('${info.cover}')`}">
                   </div>
                   <div class="title">{{info.title}}</div>
                   <div class="author">

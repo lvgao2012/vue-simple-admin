@@ -13,9 +13,9 @@ import articleInfo from '@/views/article/article-info'
 import articleEdit from '@/views/article/article-edit'
 
 Vue.use(Router)
-
+//github-pages 无法使用history模式，开发可使用
 export default new Router({
-    mode: 'history',
+    // mode: 'history',
     routes: [{
             path: '/',
             base: __dirname,
