@@ -31,3 +31,35 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### 文档目录划分
+```
+    ├── build       // 构建配置  Vue-cli      *** 开发忽略 ***
+    ├── config      // 构建配置  Vue-cli      *** 开发忽略 ***
+    ├── dist        // 构建命令生成静态资源     *** 开发忽略 ***
+    ├── node_modules    // node 包           *** 开发忽略 *** 
+    ├── index.html  // App 首页
+    ├─src
+    │  ├── App.vue     // 入口组件
+    |  ├── main.js     // 入口配置文件
+    │  ├─assets   //文件资源  样式、图片、iconfont图标
+    │  ├─components // 非View级别组件存放
+    │  ├─filters  // Vue filter 过滤
+    │  ├─mixins   // Vue mixin 混合
+    │  ├─libs
+    │  │      api    //接口请求
+    │  │      url.js   //api请求地址
+    │  │      mockdata.js   //mock数据构造
+    │  │      http.js   //http请求封装
+    │  │      toaster.js  //弹窗信息
+    │  │      utils.js  //数据验证、公共函数封装
+    │  ├─store  //vuex 后期再用
+    │  │  └─modules
+    │  │          user.js //登录信息
+    │  └─views  // App views 路由页面  对应导航 页面级组件
+    │      ├─app  //修改密码、左导航、登录页、顶部条 页面全局使用
+    │      ├─other //各种页面
+    └─static  //静态资源 不会被编辑
+        │  update.html  //IE浏览器升级提醒
+        └─image //其他静态资源图片
+```
