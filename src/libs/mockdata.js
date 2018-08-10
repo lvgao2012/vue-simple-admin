@@ -207,12 +207,38 @@ Mock.mock(new RegExp('article/info'), 'get', {
       let idx = Mock.Random.integer(1, article.length - 15)
       return article.slice(idx, idx + 15).join('')
     },
-    'type|1':[
-      '新闻','生活','社会','娱乐','财经'
+    'type|1': [
+      '新闻', '生活', '社会', '娱乐', '财经'
     ],
     date: '@date',
     subtitle: '@cparagraph',
     author: '@cname',
     cover: 'http://placekitten.com/g/320/240',
+  }
+})
+
+//用户登录注册信息
+Mock.mock(new RegExp('user/getcode'), {
+  code: 200,
+})
+Mock.mock(new RegExp('user/register'), 'post', {
+  code: 200,
+})
+Mock.mock(new RegExp('user/login'), 'post', {
+  code: 200,
+  data: {
+    token: 'faosifhoasfaslkdfaj'
+  }
+})
+Mock.mock(new RegExp('user/info'), {
+  code: 200,
+  data: {
+    name: '@cname',
+  }
+})
+Mock.mock(new RegExp('user/checklogin'), {
+  code: 200,
+  data: {
+    login: true
   }
 })

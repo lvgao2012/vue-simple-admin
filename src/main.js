@@ -11,8 +11,10 @@ import '@/assets/css/common.styl'
 import '@/libs/mockdata.js'
 import utils from '@/libs/utils.js'
 import api from '@/libs/api/index.js'
+import toaster from '@/libs/toaster'
 Vue.prototype.$utils = utils
 Vue.prototype.$api = api
+Vue.prototype.$toaster = toaster
 
 Vue.use(ElementUI)
 

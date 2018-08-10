@@ -44,6 +44,10 @@
           <i class="el-icon-setting"></i>
           <span slot="title">部门树</span>
         </el-menu-item>
+        <el-menu-item @click="loginout" index="xx">
+          <i class="el-icon-d-arrow-left"></i>
+          <span slot="title">退出先放这</span>
+        </el-menu-item>
       </el-menu>
     </el-aside>
   </vue2-scrollbar>
@@ -66,6 +70,10 @@ export default {
     }
   },
   methods: {
+    loginout() {
+      this.$utils.setCookie('lgtoken', '')
+      window.location.href = '/'
+    },
     handleOpen(key, keyPath) {
       console.log(key, keyPath)
     },

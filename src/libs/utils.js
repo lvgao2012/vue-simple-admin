@@ -80,9 +80,9 @@ export default {
     }
   },
   getuid() {
-    return this.getCookie('lxuid')
+    return this.getCookie('lguid')
   },
   getkey() {
-    return this.getCookie('lxtoken')
+    return this.getCookie('lgtoken')
   },
 }

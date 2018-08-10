@@ -68,11 +68,11 @@ export default {
       },
       method: option.method || 'post',
       data: option.data,
-      onUploadProgress: option.progress || function (progressEvent) {},
       success: option.succ || function (res) {},
       error: option.error || function (res) {}
     }
     if (option.data && option.data.constructor == FormData) {
+      options['onUploadProgress'] = option.progress || function (progressEvent) {}
       options.headers['Content-Type'] = 'multipart/form-data; charset=utf-8'
     } else {
       options.data = QS.stringify(options.data)
