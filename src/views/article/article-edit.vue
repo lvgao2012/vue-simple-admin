@@ -128,7 +128,7 @@ export default {
     position fixed
     top 100px
     right 50px
-    background url("/static/image/iphonex.png")
+    background-image url("../../../static/image/iphonex.png")
     width 360px
     background-repeat no-repeat
     height 750px

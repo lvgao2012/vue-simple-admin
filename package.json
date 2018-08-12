@@ -18,6 +18,8 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.5.2",
+    "vue-echarts": "^3.0.9",
+    "vue-event-calendar": "^1.5.2",
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.1",
     "vue2-scrollbar": "^0.0.3"

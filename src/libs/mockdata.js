@@ -189,7 +189,7 @@ Mock.mock(new RegExp('list/article'), 'get', {
   data: {
     'list|10': [{
       id: '@increment',
-      title: '@ctitle',
+      title: '@ctitle(15,30)',
       context: '@cparagraph',
       createTime: '@date',
       'sex|1': ['男', '女'],
