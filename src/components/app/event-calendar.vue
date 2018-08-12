@@ -48,6 +48,15 @@ export default {
     .cal-wrapper
       padding 0px
       width 100%
+      .cal-header
+        &>div
+          padding 5px 10px
+      .cal-body
+        .weeks
+          .item
+            line-height 40px
+      .date-num
+        line-height 40px
     .events-wrapper
       display none
 </style>

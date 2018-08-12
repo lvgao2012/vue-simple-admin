@@ -132,23 +132,23 @@ export default {
       ],
       bar: {
         legend: {
-          data: [{ name: '规模' }, { name: '市值' }, { name: '人员' }]
+          data: [{ name: 'A店' }, { name: 'B店' }, { name: 'C店' }]
         },
         tooltip: {},
         dataset: {
           source: [
-            ['2015', ...randomize()],
-            ['2016', ...randomize()],
-            ['2017', ...randomize()],
-            ['2018', ...randomize()]
+            ['6月', ...randomize()],
+            ['7月', ...randomize()],
+            ['8月', ...randomize()],
+            ['9月', ...randomize()]
           ]
         },
-        xAxis: { type: 'category', name: '年份' },
+        xAxis: { type: 'category', name: '月份' },
         yAxis: { name: '万元' },
         series: [
-          { type: 'bar', name: '规模', color: '#00BBFF' },
-          { type: 'bar', name: '市值', color: '#49a9ee' },
-          { type: 'bar', name: '人员', color: '#0066bb' }
+          { type: 'bar', name: 'A店', color: '#00BBFF' },
+          { type: 'bar', name: 'B店', color: '#49a9ee' },
+          { type: 'bar', name: 'C店', color: '#0066bb' }
         ]
       },
       line: {
