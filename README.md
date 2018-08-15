@@ -14,16 +14,16 @@
 ## 开发
   个人使用vscode进行开发，配置 editorconfig、prettierrc.json 美化代码缩进、stylus样式、以及js格式，保证风格统一
 <p>
-<img style="width:100%" src="https://github.com/lvgao2012/vue-simple-admin/tree/master/static/image/screen/login.png">
+<img style="width:100%" src="https://lvgao2012.github.io/vue-simple-admin/static/image/screen/login.png">
 </p>
 <p>
-<img style="width:100%" src="https://github.com/lvgao2012/vue-simple-admin/tree/master/static/image/screen/index.png">
+<img style="width:100%" src=" https://lvgao2012.github.io/vue-simple-admin/static/image/screen/index.png">
 </p>
 <p>
-<img style="width:100%" src="https://github.com/lvgao2012/vue-simple-admin/tree/master/static/image/screen/articl-list.png">
+<img style="width:100%" src=" https://lvgao2012.github.io/vue-simple-admin/static/image/screen/article-list.png">
 </p>
 <p>
-<img style="width:100%" src="https://github.com/lvgao2012/vue-simple-admin/tree/master/static/image/screen/article-edit.png">
+<img style="width:100%" src=" https://lvgao2012.github.io/vue-simple-admin/static/image/screen/article-edit.png">
 </p>
 ## Build Setup
 
