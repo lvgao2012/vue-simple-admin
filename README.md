@@ -17,13 +17,13 @@
 <img style="width:100%" src="https://lvgao2012.github.io/vue-simple-admin/static/image/screen/login.png">
 </p>
 <p>
-<img style="width:100%" src=" https://lvgao2012.github.io/vue-simple-admin/static/image/screen/index.png">
+<img style="width:100%" src="https://lvgao2012.github.io/vue-simple-admin/static/image/screen/index.png">
 </p>
 <p>
-<img style="width:100%" src=" https://lvgao2012.github.io/vue-simple-admin/static/image/screen/article-list.png">
+<img style="width:100%" src="https://lvgao2012.github.io/vue-simple-admin/static/image/screen/article-list.png">
 </p>
 <p>
-<img style="width:100%" src=" https://lvgao2012.github.io/vue-simple-admin/static/image/screen/article-edit.png">
+<img style="width:100%" src="https://lvgao2012.github.io/vue-simple-admin/static/image/screen/article-edit.png">
 </p>
 ## Build Setup
 
