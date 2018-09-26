@@ -12,8 +12,11 @@ import articleList from '@/views/article/article-list'
 import articleInfo from '@/views/article/article-info'
 import articleEdit from '@/views/article/article-edit'
 
+//地图
+import vueamap from '@/views/map/amap.vue'
+
 Vue.use(Router)
-//github-pages 无法使用history模式，开发可使用
+    //github-pages 无法使用history模式，开发可使用
 export default new Router({
     // mode: 'history',
     routes: [{
@@ -48,6 +51,10 @@ export default new Router({
         {
             path: '/article/info/:id',
             component: articleInfo
+        },
+        {
+            path: '/map/amap',
+            component: vueamap
         },
         {
             path: '*',

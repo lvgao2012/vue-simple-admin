@@ -89,6 +89,13 @@ export default {
         let token = res.data.token
         this.$utils.setCookie('lgtoken', token)
         this.$toaster.ok('登录成功')
+        this.$notify.success({
+          title:'您有一条新消息',
+          message:'大哥！来玩儿呗~',
+          position:'bottom-right',
+          duration:0,
+          type:'success'
+        })
         this.$emit('loginSucc')
       })
     },

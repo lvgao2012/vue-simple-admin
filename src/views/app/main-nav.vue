@@ -33,7 +33,7 @@
             <span>其他常用组件</span>
           </template>
           <el-menu-item index="1-3">文章编辑</el-menu-item>
-          <el-menu-item index="1-4-1">高德地图</el-menu-item>
+          <el-menu-item index="/map/amap">高德地图</el-menu-item>
           <el-menu-item index="1-4-1">轮播</el-menu-item>
           <el-menu-item index="1-4-1">图标iconfont</el-menu-item>
           <el-menu-item index="1-4-1">自定义上传</el-menu-item>
